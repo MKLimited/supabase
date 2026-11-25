@@ -1,0 +1,21 @@
+id,title,category,met_value,target_muscle,difficulty,image_path,image_path_peak,is_active,title_vi,updated_at,updated_by
+1,Stair Climber,Cardio,8,Chân,Dễ,flat/stair-climber-main.webp,null,true,null,null,null
+2,Stationary Bike,Cardio,8,Chân,Dễ,flat/stationary-bike-main.webp,null,true,null,null,null
+3,Elliptical Trainer,Cardio,8,Toàn thân,Dễ,flat/elliptical-trainer-main.webp,null,true,null,null,null
+4,Incline Treadmill Walk,Cardio,8,Toàn thân,Dễ,flat/incline-treadmill-walk-main.webp,null,true,null,null,null
+5,Rowing Machine,Cardio,8,Toàn thân,Dễ,flat/rowing-machine-start.webp,flat/rowing-machine-peak.webp,true,null,null,null
+6,Running,Cardio,8,Toàn thân,Dễ,flat/running-main.webp,null,true,null,null,null
+7,SkiErg,Cardio,8,Toàn thân,Trung bình,flat/ski-erg-start.webp,flat/ski-erg-peak.webp,true,null,null,null
+8,Treadmill Running,Cardio,8,Toàn thân,Dễ,flat/treadmill-running-main.webp,null,true,null,null,null
+9,Walking,Cardio,3.5,Toàn thân,Dễ,flat/walking-main.webp,null,true,null,null,null
+10,Mountain Climbers,HIIT,8,Bụng,Dễ,flat/mountain-climbers-start.webp,flat/mountain-climbers-peak.webp,true,null,null,null
+11,Box Jump,HIIT,7,Chân,Trung bình,flat/box-jump-start.webp,flat/box-jump-peak.webp,true,null,null,null
+12,Jump Squat,HIIT,7,Chân,Dễ,flat/jump-squat-start.webp,flat/jump-squat-peak.webp,true,null,null,null
+13,Plyo Lunge,HIIT,7,Chân,Trung bình,flat/plyo-lunge-start.webp,flat/plyo-lunge-peak.webp,true,null,null,null
+14,Plyo Push-Up,HIIT,7,Ngực,Trung bình,flat/plyo-push-up-start.webp,flat/plyo-push-up-peak.webp,true,null,null,null
+15,Air Bike,HIIT,8,Toàn thân,Trung bình,flat/air-bike-main.webp,null,true,null,null,null
+16,Battle Rope Double Slam,HIIT,10.3,Toàn thân,Trung bình,flat/battle-rope-double-slam-start.webp,flat/battle-rope-double-slam-peak.webp,true,null,null,null
+17,Battle Ropes,HIIT,10.3,Toàn thân,Trung bình,flat/battle-ropes-main.webp,null,true,null,null,null
+18,Burpees,HIIT,8,Toàn thân,Trung bình,flat/burpees-main.webp,null,true,null,null,null
+19,Clean,HIIT,8,Toàn thân,Trung bình,flat/clean-start.webp,flat/clean-peak.webp,true,null,null,null
+20,Clean and Jerk,HIIT,8,Toàn thân,Trung bình,flat/clean-and-jerk-start.webp,flat/clean-and-jerk-peak.webp,true,null,null,null

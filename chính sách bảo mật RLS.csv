@@ -1,0 +1,25 @@
+schemaname,tablename,policyname,permissive,roles,cmd,qual,with_check
+public,admin_audit_log,admin reads audit log,PERMISSIVE,{authenticated},SELECT,is_admin(),null
+public,chat_messages,own rows,PERMISSIVE,{authenticated},ALL,(user_id = auth.uid()),(user_id = auth.uid())
+public,countries,read countries,PERMISSIVE,"{anon,authenticated}",SELECT,true,null
+public,foods,read foods,PERMISSIVE,{authenticated},SELECT,true,null
+public,grocery_items,own rows,PERMISSIVE,{authenticated},ALL,(user_id = auth.uid()),(user_id = auth.uid())
+public,health_scores,own rows,PERMISSIVE,{authenticated},ALL,(user_id = auth.uid()),(user_id = auth.uid())
+public,meal_plans,own rows,PERMISSIVE,{authenticated},ALL,(user_id = auth.uid()),(user_id = auth.uid())
+public,moderation_actions,read own,PERMISSIVE,{authenticated},SELECT,(user_id = auth.uid()),null
+public,post_likes,own rows,PERMISSIVE,{authenticated},ALL,(user_id = auth.uid()),(user_id = auth.uid())
+public,post_reports,read own,PERMISSIVE,{authenticated},SELECT,(reporter_id = auth.uid()),null
+public,posts,delete own post,PERMISSIVE,{authenticated},DELETE,((user_id = auth.uid()) AND (status = 'visible'::text)),null
+public,posts,insert own post,PERMISSIVE,{authenticated},INSERT,null,((user_id = auth.uid()) AND (status = 'visible'::text) AND (NOT is_muted()) AND (NOT is_banned()))
+public,posts,read visible posts,PERMISSIVE,{authenticated},SELECT,"((status = 'visible'::text) OR (user_id = auth.uid()) OR has_role(ARRAY['admin'::text, 'moderator'::text]))",null
+public,profiles,Users can manage their own profile,PERMISSIVE,{public},ALL,(auth.uid() = id),null
+public,profiles,own profile,PERMISSIVE,{authenticated},ALL,(id = auth.uid()),(id = auth.uid())
+public,user_food_logs,own rows,PERMISSIVE,{authenticated},ALL,(user_id = auth.uid()),(user_id = auth.uid())
+public,user_restrictions,read own,PERMISSIVE,{authenticated},SELECT,(user_id = auth.uid()),null
+public,user_roles,read own role,PERMISSIVE,{authenticated},SELECT,(user_id = auth.uid()),null
+public,user_settings,own rows,PERMISSIVE,{authenticated},ALL,(user_id = auth.uid()),(user_id = auth.uid())
+public,user_workout_logs,own rows,PERMISSIVE,{authenticated},ALL,(user_id = auth.uid()),(user_id = auth.uid())
+public,users,Allow anon select users,PERMISSIVE,"{anon,authenticated}",SELECT,true,null
+public,users,own user,PERMISSIVE,{authenticated},ALL,(id = auth.uid()),(id = auth.uid())
+public,water_logs,own rows,PERMISSIVE,{authenticated},ALL,(user_id = auth.uid()),(user_id = auth.uid())
+public,workouts,read workouts,PERMISSIVE,{authenticated},SELECT,true,null

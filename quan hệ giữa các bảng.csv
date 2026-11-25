@@ -1,0 +1,101 @@
+table_name,constraint_name,constraint_type,column_name,foreign_table_name,foreign_column_name
+admin_audit_log,2200_25401_10_not_null,CHECK,null,null,null
+admin_audit_log,2200_25401_1_not_null,CHECK,null,null,null
+admin_audit_log,2200_25401_5_not_null,CHECK,null,null,null
+admin_audit_log,admin_audit_log_action_check,CHECK,null,admin_audit_log,action
+admin_audit_log,admin_audit_log_actor_id_fkey,FOREIGN KEY,actor_id,null,null
+admin_audit_log,admin_audit_log_pkey,PRIMARY KEY,id,admin_audit_log,id
+admin_audit_log,admin_audit_log_reason_check,CHECK,null,admin_audit_log,reason
+chat_messages,2200_18353_1_not_null,CHECK,null,null,null
+chat_messages,2200_18353_2_not_null,CHECK,null,null,null
+chat_messages,2200_18353_3_not_null,CHECK,null,null,null
+chat_messages,2200_18353_4_not_null,CHECK,null,null,null
+chat_messages,2200_18353_5_not_null,CHECK,null,null,null
+chat_messages,chat_messages_pkey,PRIMARY KEY,id,chat_messages,id
+chat_messages,chat_messages_sender_check,CHECK,null,chat_messages,sender
+chat_messages,chat_messages_user_id_fkey,FOREIGN KEY,user_id,null,null
+countries,2200_18330_1_not_null,CHECK,null,null,null
+countries,2200_18330_2_not_null,CHECK,null,null,null
+countries,2200_18330_3_not_null,CHECK,null,null,null
+countries,2200_18330_4_not_null,CHECK,null,null,null
+countries,2200_18330_5_not_null,CHECK,null,null,null
+countries,countries_pkey,PRIMARY KEY,id,countries,id
+foods,2200_17512_12_not_null,CHECK,null,null,null
+foods,2200_17512_1_not_null,CHECK,null,null,null
+foods,2200_17512_2_not_null,CHECK,null,null,null
+foods,2200_17512_3_not_null,CHECK,null,null,null
+foods,foods_name_vi_len,CHECK,null,foods,name_vi
+foods,foods_pkey,PRIMARY KEY,id,foods,id
+foods,foods_updated_by_fkey,FOREIGN KEY,updated_by,null,null
+grocery_items,2200_18469_1_not_null,CHECK,null,null,null
+grocery_items,2200_18469_2_not_null,CHECK,null,null,null
+grocery_items,2200_18469_3_not_null,CHECK,null,null,null
+grocery_items,2200_18469_4_not_null,CHECK,null,null,null
+grocery_items,2200_18469_6_not_null,CHECK,null,null,null
+grocery_items,grocery_items_name_check,CHECK,null,grocery_items,name
+grocery_items,grocery_items_pkey,PRIMARY KEY,id,grocery_items,id
+grocery_items,grocery_items_source_food_id_fkey,FOREIGN KEY,source_food_id,foods,id
+grocery_items,grocery_items_user_id_fkey,FOREIGN KEY,user_id,null,null
+health_scores,2200_18490_1_not_null,CHECK,null,null,null
+health_scores,2200_18490_2_not_null,CHECK,null,null,null
+health_scores,2200_18490_3_not_null,CHECK,null,null,null
+health_scores,2200_18490_5_not_null,CHECK,null,null,null
+health_scores,health_scores_pkey,PRIMARY KEY,score_date,health_scores,score_date
+health_scores,health_scores_pkey,PRIMARY KEY,score_date,health_scores,user_id
+health_scores,health_scores_pkey,PRIMARY KEY,user_id,health_scores,score_date
+health_scores,health_scores_pkey,PRIMARY KEY,user_id,health_scores,user_id
+health_scores,health_scores_score_check,CHECK,null,health_scores,score
+health_scores,health_scores_user_id_fkey,FOREIGN KEY,user_id,null,null
+meal_plans,2200_17828_1_not_null,CHECK,null,null,null
+meal_plans,2200_17828_2_not_null,CHECK,null,null,null
+meal_plans,meal_plans_pkey,PRIMARY KEY,id,meal_plans,id
+meal_plans,meal_plans_user_id_fkey,FOREIGN KEY,user_id,null,null
+meal_plans,uq_meal_plan,UNIQUE,date,meal_plans,date
+meal_plans,uq_meal_plan,UNIQUE,date,meal_plans,user_id
+meal_plans,uq_meal_plan,UNIQUE,user_id,meal_plans,date
+meal_plans,uq_meal_plan,UNIQUE,user_id,meal_plans,user_id
+moderation_actions,2200_25478_1_not_null,CHECK,null,null,null
+moderation_actions,2200_25478_2_not_null,CHECK,null,null,null
+moderation_actions,2200_25478_3_not_null,CHECK,null,null,null
+moderation_actions,2200_25478_7_not_null,CHECK,null,null,null
+moderation_actions,moderation_actions_action_check,CHECK,null,moderation_actions,action
+moderation_actions,moderation_actions_created_by_fkey,FOREIGN KEY,created_by,null,null
+moderation_actions,moderation_actions_pkey,PRIMARY KEY,id,moderation_actions,id
+moderation_actions,moderation_actions_post_id_fkey,FOREIGN KEY,post_id,posts,id
+moderation_actions,moderation_actions_user_id_fkey,FOREIGN KEY,user_id,null,null
+post_likes,2200_18381_1_not_null,CHECK,null,null,null
+post_likes,2200_18381_2_not_null,CHECK,null,null,null
+post_likes,post_likes_pkey,PRIMARY KEY,post_id,post_likes,post_id
+post_likes,post_likes_pkey,PRIMARY KEY,post_id,post_likes,user_id
+post_likes,post_likes_pkey,PRIMARY KEY,user_id,post_likes,post_id
+post_likes,post_likes_pkey,PRIMARY KEY,user_id,post_likes,user_id
+post_likes,post_likes_post_id_fkey,FOREIGN KEY,post_id,posts,id
+post_likes,post_likes_user_id_fkey,FOREIGN KEY,user_id,null,null
+post_reports,2200_25504_10_not_null,CHECK,null,null,null
+post_reports,2200_25504_1_not_null,CHECK,null,null,null
+post_reports,2200_25504_2_not_null,CHECK,null,null,null
+post_reports,2200_25504_4_not_null,CHECK,null,null,null
+post_reports,2200_25504_6_not_null,CHECK,null,null,null
+post_reports,post_reports_note_check,CHECK,null,post_reports,note
+post_reports,post_reports_pkey,PRIMARY KEY,id,post_reports,id
+post_reports,post_reports_post_id_fkey,FOREIGN KEY,post_id,posts,id
+post_reports,post_reports_reason_check,CHECK,null,post_reports,reason
+post_reports,post_reports_reporter_id_fkey,FOREIGN KEY,reporter_id,null,null
+post_reports,post_reports_resolved_by_fkey,FOREIGN KEY,resolved_by,null,null
+post_reports,post_reports_status_check,CHECK,null,post_reports,status
+posts,2200_18368_1_not_null,CHECK,null,null,null
+posts,2200_18368_2_not_null,CHECK,null,null,null
+posts,2200_18368_5_not_null,CHECK,null,null,null
+posts,2200_18368_7_not_null,CHECK,null,null,null
+posts,2200_18368_8_not_null,CHECK,null,null,null
+posts,posts_hidden_by_fkey,FOREIGN KEY,hidden_by,null,null
+posts,posts_pkey,PRIMARY KEY,id,posts,id
+posts,posts_status_check,CHECK,null,posts,status
+posts,posts_user_id_fkey,FOREIGN KEY,user_id,null,null
+profiles,2200_17489_1_not_null,CHECK,null,null,null
+profiles,profiles_birth_year_range,CHECK,null,profiles,birth_year
+profiles,profiles_country_id_fkey,FOREIGN KEY,country_id,countries,id
+profiles,profiles_full_name_len,CHECK,null,profiles,full_name
+profiles,profiles_id_fkey,FOREIGN KEY,id,null,null
+profiles,profiles_pkey,PRIMARY KEY,id,profiles,id
+rate_limits,2200_41797_1_not_null,CHECK,null,null,null
