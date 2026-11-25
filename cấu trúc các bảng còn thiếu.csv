@@ -1,0 +1,76 @@
+table_name,ordinal_position,column_name,data_type,is_nullable,column_default
+profiles,1,id,uuid,NO,null
+profiles,4,age,integer,YES,null
+profiles,5,gender,text,YES,null
+profiles,6,weight,double precision,YES,null
+profiles,7,height,double precision,YES,null
+profiles,8,is_vegan,boolean,YES,false
+profiles,9,goal,text,YES,null
+profiles,10,allergies,text,YES,'Không có'::text
+profiles,11,eating_habits,text,YES,'Không có'::text
+profiles,12,preferences,text,YES,'Không có'::text
+profiles,13,medical_conditions,text,YES,'Không có'::text
+profiles,14,activity_habits,text,YES,'Không có'::text
+profiles,15,activity_level,text,YES,'it'::text
+profiles,16,created_at,timestamp with time zone,YES,now()
+profiles,17,avatar_url,text,YES,null
+profiles,18,full_name,text,YES,null
+profiles,19,birth_year,integer,YES,null
+profiles,20,country_id,integer,YES,null
+rate_limits,1,user_id,uuid,NO,null
+rate_limits,2,action,text,NO,null
+rate_limits,3,window_start,timestamp with time zone,NO,null
+rate_limits,4,hits,integer,NO,0
+user_food_logs,1,id,bigint,NO,null
+user_food_logs,2,user_id,uuid,NO,null
+user_food_logs,3,food_id,bigint,NO,null
+user_food_logs,4,meal_type,text,NO,'other'::text
+user_food_logs,5,is_liked,boolean,NO,false
+user_food_logs,6,rating,integer,YES,null
+user_food_logs,7,logged_at,timestamp with time zone,NO,now()
+user_food_logs,8,is_eaten,boolean,NO,false
+user_food_logs,9,log_date,date,NO,((now() AT TIME ZONE 'Asia/Ho_Chi_Minh'::text))::date
+user_restrictions,1,id,bigint,NO,null
+user_restrictions,2,user_id,uuid,NO,null
+user_restrictions,3,type,text,NO,'mute'::text
+user_restrictions,4,reason,text,NO,null
+user_restrictions,5,created_by,uuid,YES,null
+user_restrictions,6,created_at,timestamp with time zone,NO,now()
+user_restrictions,7,expires_at,timestamp with time zone,YES,null
+user_restrictions,8,revoked_at,timestamp with time zone,YES,null
+user_restrictions,9,revoked_by,uuid,YES,null
+user_roles,1,user_id,uuid,NO,null
+user_roles,2,role,text,NO,null
+user_roles,3,granted_by,uuid,YES,null
+user_roles,4,created_at,timestamp with time zone,NO,now()
+user_settings,1,user_id,uuid,NO,null
+user_settings,2,calorie_target,integer,YES,null
+user_settings,3,water_goal_cups,integer,YES,null
+user_settings,4,updated_at,timestamp with time zone,NO,now()
+user_workout_logs,1,id,bigint,NO,null
+user_workout_logs,2,user_id,uuid,YES,null
+user_workout_logs,3,workout_id,bigint,YES,null
+user_workout_logs,4,duration_minutes,integer,NO,null
+user_workout_logs,5,calories_burned,double precision,NO,null
+user_workout_logs,6,logged_at,timestamp with time zone,YES,now()
+users,1,id,uuid,NO,null
+users,2,email,text,YES,null
+users,3,phone,text,YES,null
+users,4,created_at,timestamp with time zone,NO,"timezone('utc'::text, now())"
+water_logs,1,id,bigint,NO,null
+water_logs,2,user_id,uuid,NO,null
+water_logs,3,amount_ml,integer,NO,250
+water_logs,4,log_date,date,NO,((now() AT TIME ZONE 'Asia/Ho_Chi_Minh'::text))::date
+water_logs,5,logged_at,timestamp with time zone,NO,now()
+workouts,1,id,bigint,NO,null
+workouts,2,title,text,NO,null
+workouts,3,category,text,YES,null
+workouts,4,met_value,double precision,NO,null
+workouts,5,target_muscle,text,YES,null
+workouts,6,difficulty,text,YES,null
+workouts,7,image_path,text,YES,null
+workouts,8,image_path_peak,text,YES,null
+workouts,9,is_active,boolean,NO,true
+workouts,10,title_vi,text,YES,null
+workouts,11,updated_at,timestamp with time zone,YES,null
+workouts,12,updated_by,uuid,YES,null
