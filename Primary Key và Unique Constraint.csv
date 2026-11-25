@@ -1,0 +1,24 @@
+schema_name,table_name,constraint_name,constraint_type,columns,definition
+public,admin_audit_log,admin_audit_log_pkey,PRIMARY KEY,id,PRIMARY KEY (id)
+public,chat_messages,chat_messages_pkey,PRIMARY KEY,id,PRIMARY KEY (id)
+public,countries,countries_pkey,PRIMARY KEY,id,PRIMARY KEY (id)
+public,foods,foods_pkey,PRIMARY KEY,id,PRIMARY KEY (id)
+public,grocery_items,grocery_items_pkey,PRIMARY KEY,id,PRIMARY KEY (id)
+public,health_scores,health_scores_pkey,PRIMARY KEY,"user_id, score_date","PRIMARY KEY (user_id, score_date)"
+public,meal_plans,meal_plans_pkey,PRIMARY KEY,id,PRIMARY KEY (id)
+public,meal_plans,uq_meal_plan,UNIQUE,"user_id, date","UNIQUE (user_id, date)"
+public,moderation_actions,moderation_actions_pkey,PRIMARY KEY,id,PRIMARY KEY (id)
+public,post_likes,post_likes_pkey,PRIMARY KEY,"post_id, user_id","PRIMARY KEY (post_id, user_id)"
+public,post_reports,post_reports_pkey,PRIMARY KEY,id,PRIMARY KEY (id)
+public,posts,posts_pkey,PRIMARY KEY,id,PRIMARY KEY (id)
+public,profiles,profiles_pkey,PRIMARY KEY,id,PRIMARY KEY (id)
+public,rate_limits,rate_limits_pkey,PRIMARY KEY,"user_id, action, window_start","PRIMARY KEY (user_id, action, window_start)"
+public,user_food_logs,user_food_logs_pkey,PRIMARY KEY,id,PRIMARY KEY (id)
+public,user_food_logs,uq_food_log,UNIQUE,"user_id, food_id, log_date, meal_type","UNIQUE (user_id, food_id, log_date, meal_type)"
+public,user_restrictions,user_restrictions_pkey,PRIMARY KEY,id,PRIMARY KEY (id)
+public,user_roles,user_roles_pkey,PRIMARY KEY,user_id,PRIMARY KEY (user_id)
+public,user_settings,user_settings_pkey,PRIMARY KEY,user_id,PRIMARY KEY (user_id)
+public,user_workout_logs,user_workout_logs_pkey,PRIMARY KEY,id,PRIMARY KEY (id)
+public,users,users_pkey,PRIMARY KEY,id,PRIMARY KEY (id)
+public,water_logs,water_logs_pkey,PRIMARY KEY,id,PRIMARY KEY (id)
+public,workouts,workouts_pkey,PRIMARY KEY,id,PRIMARY KEY (id)
